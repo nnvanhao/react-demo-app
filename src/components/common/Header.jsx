@@ -13,6 +13,14 @@ export default function Header() {
     navigate("/");
   };
 
+  const handleGoToRegisterPage = () => {
+    navigate("/register");
+  };
+
+  const handleGoToLoginPage = () => {
+    navigate("/login");
+  };
+
   return (
     <header className="bg-blue-600 text-white p-4 flex justify-between items-center">
       <h1
@@ -21,7 +29,11 @@ export default function Header() {
       >
         Movie Home Page
       </h1>
-      <div className="relative">
+      <div className="flex items-center gap-4">
+        <button onClick={handleGoToLoginPage}>Login</button>
+        <button onClick={handleGoToRegisterPage}>Register</button>
+      </div>
+      {/* <div className="relative">
         <span onClick={toggleDropdown} className="cursor-pointer">
           Admin
         </span>
@@ -31,7 +43,7 @@ export default function Header() {
             <li className="p-2 hover:bg-gray-200 cursor-pointer">Logout</li>
           </ul>
         )}
-      </div>
+      </div> */}
     </header>
   );
 }
