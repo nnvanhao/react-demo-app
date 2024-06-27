@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "name": "Laptop",
+    "rating": 4,
+    "like": 12,
+    "price": 2000,
+    "type": "action"
+  },
+  {
+    "id": 2,
+    "name": "Smartphone",
+    "rating": 5,
+    "like": 25,
+    "price": 1000,
+    "type": "romantic"
+  },
+  {
+    "id": 3,
+    "name": "Tablet",
+    "rating": 4,
+    "like": 8,
+    "price": 600,
+    "type": "action"
+  },
+  {
+    "id": 4,
+    "name": "Smartwatch",
+    "rating": 3,
+    "like": 15,
+    "price": 250,
+    "type": "romantic"
+  },
+  {
+    "id": 5,
+    "name": "Headphones",
+    "rating": 5,
+    "like": 30,
+    "price": 150,
+    "type": "action"
+  },
+  {
+    "id": 6,
+    "name": "Camera",
+    "rating": 4,
+    "like": 20,
+    "price": 1200,
+    "type": "action"
+  },
+  {
+    "id": 7,
+    "name": "Monitor",
+    "rating": 4,
+    "like": 10,
+    "price": 300,
+    "type": "romantic"
+  },
+  {
+    "id": 8,
+    "name": "Keyboard",
+    "rating": 5,
+    "like": 18,
+    "price": 100,
+    "type": "action"
+  },
+  {
+    "id": 9,
+    "name": "Mouse",
+    "rating": 4,
+    "like": 22,
+    "price": 50,
+    "type": "romantic"
+  },
+  {
+    "id": 10,
+    "name": "Printer",
+    "rating": 3,
+    "like": 5,
+    "price": 200,
+    "type": "action"
+  }
+]

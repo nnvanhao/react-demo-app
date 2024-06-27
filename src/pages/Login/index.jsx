@@ -4,6 +4,7 @@ import Header from "../../components/common/Header";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { toast } from "sonner";
+import { encrypt } from '../../utils/sercuirties';
 
 export default function Login() {
   const navigate = useNavigate();
@@ -11,27 +12,16 @@ export default function Login() {
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
 
-  const handleRegister = async () => {
-    // console.log({ firstName, lastName, email, password, confirmPassword });
-
-    // Send a POST request
-
-    // GET -> get data
-    // POST -> request create new data, verify data
-    // PUT -> update data
-    // DELETE -> delete data
-
-    // http://localhost:5510
-
-    // https://movies-nestjs-movies.tagmju.easypanel.host/
+  const handleLogin = async () => {
+    const passwordEncrypt = encrypt(password);
 
     try {
       const response = await axios({
         method: "post",
-        url: "http://localhost:5510/auth/sign-in",
+        url: "http://localhost:5510/v1/auth/sign-in",
         data: {
           email,
-          password,
+          password: passwordEncrypt,
         },
       });
 
@@ -85,7 +75,7 @@ export default function Login() {
               <button
                 type="submit"
                 className="w-full py-2 px-4 border border-transparent text-md font-semibold rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
-                onClick={() => handleRegister()}
+                onClick={() => handleLogin()}
               >
                 Login
               </button>

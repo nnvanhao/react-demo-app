@@ -6,6 +6,8 @@ import Register from "./pages/Register";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Toaster } from "sonner";
 import Login from "./pages/Login";
+import ActiveUser from "./pages/ActiveUser";
+import MovieType from "./pages/MovieType/MovieType";
 
 const App = () => {
   return (
@@ -15,8 +17,10 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/detail-movie" element={<MovieDetails />} />
+          <Route path="/movie-type" element={<MovieType />} />
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/auth/active-user" element={<ActiveUser />} />
         </Routes>
       </div>
     </Router>

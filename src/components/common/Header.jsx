@@ -21,6 +21,10 @@ export default function Header() {
     navigate("/login");
   };
 
+  const handleGoToMovieType = (movieType) => {
+    navigate(`/movie-type?type=${movieType}`);
+  };
+
   return (
     <header className="bg-blue-600 text-white p-4 flex justify-between items-center">
       <h1
@@ -29,6 +33,10 @@ export default function Header() {
       >
         Movie Home Page
       </h1>
+      <div className="flex gap-2 items-center">
+        <span onClick={() => handleGoToMovieType("action")}>Action</span>
+        <span onClick={() => handleGoToMovieType("romantic")}>Romantic</span>
+      </div>
       <div className="flex items-center gap-4">
         <button onClick={handleGoToLoginPage}>Login</button>
         <button onClick={handleGoToRegisterPage}>Register</button>

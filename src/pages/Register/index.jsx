@@ -4,6 +4,7 @@ import Header from "../../components/common/Header";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { toast } from "sonner";
+import { encrypt } from '../../utils/sercuirties';
 
 export default function Register() {
   const navigate = useNavigate();
@@ -26,13 +27,15 @@ export default function Register() {
 
     // Yeu cau dang ky
 
+    const passwordEncrypt = encrypt(password);
+
     try {
       const response = await axios({
         method: "post",
-        url: "http://localhost:5510/auth/sign-up",
+        url: "http://localhost:5510/v1/auth/sign-up",
         data: {
           email,
-          password,
+          password: passwordEncrypt,
           firstName,
           lastName,
         },
